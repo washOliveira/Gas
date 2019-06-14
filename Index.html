@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+<title>Consumo de Gás</title>
+
+<!-- CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<div class="container"><!-- Início Conteiner -->
+		<div class="row"><!-- Início Row -->
+			<div class="col-md-1"><!-- Início Coluna 1 -->
+			</div><!-- Fim Coluna 1 -->
+
+			<div class="col-md-10"><!-- Início Coluna 2 -->
+				<div class="page-header well well-lg col-md-12"><!-- Título -->
+					<h1>Consumo de Gás</h1>
+				</div><!-- Fim Título -->
+				
+				<div class="well well-lg col-md-7"><!-- Início Coluna 2.1 -->
+					<h3>Como calcular a quantidade de gás no botijão</h3>
+					</br>
+					<p>A única maneira correta para se saber a quantidade de gás propano em um botijão é pesando-o. A seguir as etapas necessárias para se saber a quantidade de gás propano de um botijão e para se estimar o seu tempo de duração.</p>
+					</br>
+					<ol>
+						<li>As letras TW estão gravadas na lateral do botijão seguidas de um número. Esse número é o peso do botijão vazio. Por exemplo, o típico botijão de propano de 5 galões deve marcar TW 8. O peso do botijão vazio no exemplo é 8 quilos.</li>
+						<li>Pese o botijão em uma balança de banheiro para saber o peso total atual. Digamos que o peso atual do botijão seja 11 quilos.</li>
+						<li>Subtraia o peso do botijão do peso total para saber o peso do propano. 11 kg – 8 kg = 3 kg.</li>
+						<li>Cada quilo de propano contém 21.600 BTUs. Multiplique o número de quilos pelo número de BTUs para obter o número total de BTUs restante no botijão. 7 × 21.600 = 151.000 BTUs.</li>
+						<li>Encontre o rendimento dos BTUs do aparelho em questão. Geralmente você pode encontrá-los em sites de fabricantes. Por exemplo, uma grelha do propano pode queimar 12.000 BTUs por hora. Para descobrir o tempo restante da grelha divida 151.000 por 12.000. 151.000 ÷ 12.000 = 12,6 horas de tempo de duração.</li>
+						<li>Para uma fácil referência futura. Divida 12,6 horas pelos referidos 3 quilos para obter 4,2 horas de tempo de uso por cada quilo de propano.</li>
+					</ol>					
+				</div><!-- Fim Coluna 2.1 -->
+				
+				<div class="well well-lg col-md-5"><!-- Início Coluna 2.2 -->
+					<h3>Consumo de Gás</h3>
+					
+					<div class="well well-lg"> <!-- Formulário -->
+						<form class="form-horizontal" name="FirstForm">
+							<div class="form-group">
+								<label class="control-label col-sm-8">TW - Peso do Botijão Vazio (Kg):</label>
+								<div class="col-sm-4">
+									<input id="tw" type="text" class="form-control" name="Peso do Botijão Vazio"/>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="control-label col-sm-8">Peso do Botijão (Kg):</label>
+								<div class="col-sm-4">
+									<input id="pb" type="text" class="form-control" name="Peso do Botijão"/>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="control-label col-sm-8">Consumo do fogão por hora (BTUs):</label>
+								<div class="col-sm-4">
+									<input id="cf" type="text" class="form-control" name="Consumo do fogão"/>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<div class="text-center">
+									<button type="button" class="btn btn-primary center-block" id="calc">Calcular</button>
+								</div>
+							</div>
+						</form>
+					</div><!-- Fim Formulário -->
+
+					<div class="well well-lg"><!-- Tabela de Resultados -->
+						<table class="table table-striped">
+							<caption>Tabela de Resultados</caption>
+							<tr>
+								<td>Peso do propano (Kg)</td><!-- Item -->
+								<td id="idPesoPropano" value=""></td>
+							</tr>
+							<tr>
+								<td>BTUs restantes</td><!-- Item -->
+								<td id="idBTUsRestantes" value=""></td>
+							</tr>
+							<tr>
+								<td>Tempo restante para consumo (h)</td><!-- Item -->
+								<td id="idTempoRestante" value=""></td>
+							</tr>
+						</table>
+					</div><!-- Fim Tabela de Resultados -->
+				</div><!-- Fim Coluna 2.2 -->
+			</div><!-- Fim Coluna 2 -->
+
+			<div class="col-md-1"><!-- Início Coluna 3 -->
+			</div><!-- Fim Coluna 3 -->
+		</div><!-- Fim Row -->
+	</div><!-- Fim Conteiner -->
+
+	<!-- JavaScript -->
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
